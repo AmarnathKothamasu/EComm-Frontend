@@ -1,0 +1,19 @@
+<app-header></app-header>
+<br>
+<div class="container">
+    <ul class="list-group">
+      <li class="list-group-item colorful-list-item" *ngFor="let user of usersList">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1" style="width:500px">{{ user.firstname }} {{ user.lastname }}</h5>
+          <small class="text-muted">ID: {{ user.id }}</small>
+          <button class="btn btn-sm btn-danger" (click)="deleteUser(user.id)">Delete</button>
+        </div>
+        <p class="mb-1">Email: {{ user.email }}</p>
+        <small>Role: {{ user.role }}</small>
+      </li>
+    </ul>
+  </div>
+  
+  
+  
+  

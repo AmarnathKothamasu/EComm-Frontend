@@ -1,0 +1,26 @@
+<div class="container" style="height:auto" >
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login <i class="fa fa-sign-in" aria-hidden="true"></i></h1>
+                    <h6>Login with Email and password</h6>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address  <i class="fa fa-envelope" aria-hidden="true"></i></label>
+                      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password  <i class="fa fa-key" aria-hidden="true"></i></label>
+                      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary text-center" style="margin-bottom: 5px;">Login      <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                  </form>
+                  <a routerLink="/signUp">Hey!! New user ?? Please SignUp!!</a>
+            </div>
+        </div>
+    </div>
+</div>

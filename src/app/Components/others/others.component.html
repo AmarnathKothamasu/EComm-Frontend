@@ -1,0 +1,34 @@
+
+<section id="product">
+    <div class="container">
+            <div class="col-12">
+                <div class="row mt-3">
+                    <div class="col-lg-3 pt-1" *ngFor="let product of products"> 
+                        <div class="box-shadow" *ngIf="product.categoryName=='Mobile'||product.categoryName=='Tablet'||product.categoryName=='headphones'">
+                            <div class="card" >
+                                <img class="img-fluid" style="height: 200px;" [src]="product.productImageUrl" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{product.productName}}</h5>
+                                    <p class="card-text"><span
+                                            class="text-danger fw-semibold me-2"> Price : ${{product.productPrice}}</span>
+                                     
+                                    <div class="row">
+                                        <div class="col-6 text-start">
+                                            <button class="btn btn-sm btn-success">  Reviews   </button>
+                                        </div>
+                                        <div class="col-6 text-end">
+                                            <button class="btn btn-sm btn-success btn-primary" (click)="addItemtoCart(product)"> Add To Cart</button>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+
+</section>

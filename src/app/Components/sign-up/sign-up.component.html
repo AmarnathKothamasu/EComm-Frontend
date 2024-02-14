@@ -1,0 +1,39 @@
+<div class="center-content justify-content-center" style="height:auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="text-center">
+                        <h1>SignUp</h1>
+                        <h6>Please fill up your Details</h6>
+                    </div>
+                    <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+                        <div class="mb-3">
+                            <label for="FirstName" class="form-label">FirstName  <i class="fa fa-user"></i></label>
+                            <input type="text" formControlName="firstname" class="form-control" id="FirstName" aria-describedby="FirstName">
+                            <span class="text-danger" *ngIf="signUpForm.controls['firstname'].dirty && signUpForm.hasError('required','firstname')">*please enter firstname </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="LastName" class="form-label">LastName  <i class="fa fa-user"></i></label>
+                            <input type="text" formControlName="lastname" class="form-control" id="FirstName" aria-describedby="LastName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address   <i class="fa fa-envelope" aria-hidden="true"></i></label>
+                            <input type="email"  formControlName="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password  <i class="fa fa-key" aria-hidden="true"></i></label>
+                            <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="">
+                        </div>
+                        <div id="SecurityMessage" class="form-text">We'll never share your details with anyone else.
+                        </div>
+                        <button type="submit" class="btn btn-primary text-center"  style="margin-bottom: 5px;">SignUp</button>
+                    </form>
+
+                    <a routerLink="/login">Already Existing User!? Please Login!!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
